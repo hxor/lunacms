@@ -38,7 +38,10 @@
         </a>
       </span>
     </div>
-    <img id="holder" style="margin-top:15px;max-height:100px;">
+    @if (isset($user) && $user->photo !== '')
+      <img src="{{ $user->photo }}" id="holder" style="margin-top:15px;max-height:254px;max-width: 152px;">
+    @endif
+      <img id="holder" style="margin-top:15px;max-height:254px;max-width: 152px;">
     <small class="text-danger">{{ $errors->first('photo') }}</small>
 </div>
 

@@ -11,15 +11,17 @@
         @include('layouts.backend.partials._bread', ['data' => empty($bread) ? '' : $bread])
 
         <div class="row">
-          <div class="card-box">
-            <h4 class="m-t-0 header-title"><b>Edit {{ $category->title }} Category</b></h4>
+          <div class="col-lg-9 col-md-8">
+            <div class="card-box">
+              <h4 class="m-t-0 header-title"><b>Edit {{ $category->title }} Category</b></h4>
 
-            {!! Form::model($category, ['route' => ['admin.category.update', $category->id],  'method' => 'PUT']) !!}
+              {!! Form::model($category, ['route' => ['admin.category.update', $category->id],  'method' => 'PUT']) !!}
 
-              @include('main.backend.admin.category._form')
+                @include('main.backend.admin.category._form')
 
-            {!! Form::close() !!}
+              {!! Form::close() !!}
 
+            </div>
           </div>
         </div>
         <!-- end row -->

@@ -11,15 +11,17 @@
         @include('layouts.backend.partials._bread', ['data' => empty($bread) ? '' : $bread])
 
         <div class="row">
-          <div class="card-box">
-            <h4 class="m-t-0 header-title"><b>Add Users</b></h4>
+          <div class="col-lg-9 col-md-8">
+            <div class="card-box">
+              <h4 class="m-t-0 header-title"><b>Add Users</b></h4>
 
-            {!! Form::open(['method' => 'POST', 'route' => 'admin.user.store', 'class' => 'data-parsley-validate novalidate', 'files' => true]) !!}
+              {!! Form::open(['method' => 'POST', 'route' => 'admin.user.store', 'class' => 'data-parsley-validate novalidate', 'files' => true]) !!}
 
-                @include('main.backend.admin.user._form')
+                  @include('main.backend.admin.user._form')
 
-            {!! Form::close() !!}
+              {!! Form::close() !!}
 
+            </div>
           </div>
         </div>
         <!-- end row -->
