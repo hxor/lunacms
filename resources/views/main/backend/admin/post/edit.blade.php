@@ -73,7 +73,7 @@
                 }
             }
           });
-          // $('#lfm').filemanager('image');
+          $('#lfm').filemanager('image');
       });
     </script>
 @endsection
